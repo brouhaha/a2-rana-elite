@@ -440,7 +440,7 @@ Lc618:	jsr	Scdd2
 	
 Lc622:	jsr	Scd7d
 Lc625:	clc
-Lc626:	PHP
+Lc626:	php
 Lc627:	lda	q6l,x
 	bpl	Lc627
 Lc62c:	eor	#$d5		; first byte of mark
@@ -471,8 +471,8 @@ Lc64c:	ldy	D03ce
 ; DOS 3.2.1 boot reenters the PROM via jsr (effectively) to $Cn5D
 	fillto	$c65c
 Pc65c:	clc
-Pc65d:	PHP
-	SEC
+Pc65d:	php
+	sec
 	bcs	Lc610
 
 	bpl	Lc627
